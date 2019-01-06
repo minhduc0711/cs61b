@@ -28,12 +28,14 @@ public class LinkedListDeque<T> {
         return size;
     }
 
-    public Boolean isEmpty() {
+    public boolean isEmpty() {
         return size == 0;
     }
 
     public T get(int index) {
-        if ((index >= size) || (index < 0)) return null;
+        if ((index >= size) || (index < 0)) {
+            return null;
+        }
         ItemNode current = sentinel.next;
         for (int i = 0; i < index; i++) {
             current = current.next;

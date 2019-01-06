@@ -1,6 +1,6 @@
 public class ArrayDeque<T> {
-    public static final double EXPAND_FACTOR = 2;
-    public static final double SHRINK_FACTOR = 0.5;
+    private static final double EXPAND_FACTOR = 2;
+    private static final double SHRINK_FACTOR = 0.5;
 
     private T[] items;
     private int size;
@@ -33,7 +33,7 @@ public class ArrayDeque<T> {
     }
 
     public T get(int index) {
-        return items[Math.floorMod(nextFirst + 1 + index , items.length)];
+        return items[Math.floorMod(nextFirst + 1 + index, items.length)];
     }
 
     public void addFirst(T item) {
