@@ -48,9 +48,9 @@ public class GuitarString {
         //       Do not call StdAudio.play().
         double front = buffer.dequeue();
         double val = (front + buffer.peek()) * 0.5 * DECAY;
-        if (Math.random() < 0.5) {
-            val = -val;
-        }
+//        if (Math.random() < 0.5) {
+//            val = -val;
+//        }
         buffer.enqueue(val);
     }
 
